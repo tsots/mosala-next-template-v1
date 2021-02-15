@@ -1,14 +1,20 @@
 import {createGlobalStyle} from 'styled-components';
-import theme from './theme';
 
 
 const GlobalStyles = createGlobalStyle`
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
-    background-color: ${(props) => theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.primary};
 }
 
 html{
-    color: ${(props) => theme.colors.secondary}
+    color: ${(props) => props.theme.colors.secondary};
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 `
 
